@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HaloWeather</string>
+    <string name="failed_load_data">Failed to load data</string>
+    <string name="search_label">Search for any location</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="uv_index">UV Index</string>
+    <string name="precipitation">Precipitation</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="pressure">Pressure</string>
+    <string name="feels_like">Feels like</string>
+    <string name="visibility">Visibility</string>
+    <string name="cuaca_lokal_anda">Your Local Weather</string>
+    <string name="cari_lokasi_lainnya">Search Another Location</string>
+    <string name="detect_location">Detect your location</string>
+    <string name="failed_detect_location">Failed detect your location</string>
+    <string name="search_city">Find your Location</string>
+    <string name="forecast_3_days">Forecast 3 days</string>
+</resources>

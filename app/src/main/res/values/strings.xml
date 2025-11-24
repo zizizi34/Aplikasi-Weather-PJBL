@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HaloWeather</string>
+    <string name="failed_load_data">Failed to load data</string>
+    <string name="search_label">Search for any location</string>
+    <string name="humidity">Humidity</string>
+    <string name="wind">Wind</string>
+    <string name="uv_index">UV Index</string>
+    <string name="precipitation">Precipitation</string>
+</resources>
