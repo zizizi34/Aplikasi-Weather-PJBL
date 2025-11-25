@@ -9,11 +9,11 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.elnoah.haloweather.api.Constant
-import com.elnoah.haloweather.api.LocationSuggestion
-import com.elnoah.haloweather.api.NetworkResponse
-import com.elnoah.haloweather.api.RetrofitInstance
-import com.elnoah.haloweather.api.WeatherModel
+import com.example.weather_app.api.Constant
+import com.example.weather_app.api.LocationSuggestion
+import com.example.weather_app.api.NetworkResponse
+import com.example.weather_app.api.RetrofitInstance
+import com.example.weather_app.api.WeatherModel
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority

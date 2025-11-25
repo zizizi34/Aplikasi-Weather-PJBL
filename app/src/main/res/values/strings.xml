@@ -7,4 +7,16 @@
     <string name="wind">Wind</string>
     <string name="uv_index">UV Index</string>
     <string name="precipitation">Precipitation</string>
+    <!-- Defaults for other locales / keys referenced in code -->
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="detect_location">Detecting your location</string>
+    <string name="failed_detect_location">Failed to detect your location</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="visibility">Visibility</string>
+    <string name="pressure">Pressure</string>
+    <string name="cuaca_lokal_anda">Local Weather</string>
+    <string name="cari_lokasi_lainnya">Search Another Location</string>
+    <string name="search_city">Search Your Area</string>
+    <string name="forecast_3_days">Forecast (3 Days)</string>
 </resources>

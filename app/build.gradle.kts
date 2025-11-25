@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.haloweather"
+    namespace = "com.example.weather_app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.haloweather"
+        applicationId = "com.example.weather_app"
         minSdk = 28
         targetSdk = 36
         versionCode = 1
@@ -60,6 +60,8 @@ dependencies {
     val retrofitVersion = "3.0.0"
     implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+    // Explicit Gson dependency to ensure @SerializedName and Gson classes are available
+    implementation("com.google.code.gson:gson:2.10.1")
 
     // LiveData Compose
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
