@@ -1,30 +1,4 @@
-# Weather-App
 
-<p align="center">
-	<img src="app/src/main/res/drawable/weather_app_text.png" alt="Weather-App Logo" width="360" />
-</p>
-
-
-
-Weather-App adalah aplikasi cuaca untuk Android yang dirancang dengan fokus pada pengalaman pengguna (UX) yang bersih dan responsif. Aplikasi dibangun dengan Jetpack Compose dan menyediakan dukungan tema terang/gelap serta skema warna dinamis yang menyesuaikan dengan kondisi cuaca.
-
-## Fitur
-
-- Dukungan tema Light & Dark
-- Skema warna dinamis berdasarkan kondisi cuaca (cerah, hujan, mendung, dll.)
-- Tampilan cuaca saat ini (suhu, kondisi, ikon, lokasi)
-- Prakiraan beberapa hari ke depan
-- Pencarian lokasi dengan autocomplete
-- Implementasi modern: Jetpack Compose, ViewModel, Retrofit
-
-## Tampilan Utama
-
-<p align="center">
-	<img src="README/image%20copy.png" alt="Tampilan Aplikasi 1" width="420" style="margin-right:12px;" />
-	<img src="README/image%20copy%206.png" alt="Tampilan Aplikasi 2" width="420" />
-</p>
-
-## Galeri
 # Weather-App
 
 <p align="center">
