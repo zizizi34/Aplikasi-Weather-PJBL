@@ -1,63 +1,130 @@
-# WeatherApp
+🌤️ WeatherApp — Modern Android Weather Experience
 
-WeatherApp adalah aplikasi cuaca sederhana berbasis Android (Jetpack Compose) yang menampilkan informasi cuaca saat ini dan prakiraan 3 hari.
+Cuaca Lokal Anda • Dynamic UI • Light & Dark Mode • Jetpack Compose
 
-Pembuat: Narendra
+<p align="center"> <img src="https://i.ibb.co/ysT8RLH/light.jpg" width="280"> <img src="https://i.ibb.co/6vHbD5d/dark.jpg" width="280"> </p>
+<p align="center"> <b>WeatherApp</b> adalah aplikasi cuaca modern berbasis Android Jetpack Compose dengan UI adaptif mengikuti kondisi cuaca dan mode terang/gelap. <br>Dirancang oleh <b>Narendra</b>. </p>
+📸 Preview Lengkap Aplikasi
 
-## Ringkasan fitur
-- Menampilkan cuaca saat ini (temperature, kondisi cuaca, kelembapan, kecepatan angin, visibilitas, dsb).
-- Prakiraan cuaca 3 hari.
-- Deteksi lokasi saat ini (menggunakan Google Fused Location API bila permission diberikan), fallback ke kota default (Surakarta).
-- Pencarian lokasi dengan saran otomatis (autocomplete) menggunakan endpoint search.
-- Antarmuka yang menyesuaikan warna (ColorScheme) berdasarkan kondisi cuaca (mis. hujan, berawan, cerah) dan mendukung mode terang / gelap.
-- Efek visual (rain, snow, cloud, sun, thunder) berdasarkan kondisi cuaca.
-- Dukungan layout portrait & landscape.
+Letakkan file screenshot kamu nanti di folder /screenshots/ pada repo.
+Saya sudah menyiapkan layout markdown premium yang tinggal kamu isi.
 
-## API
-Aplikasi menggunakan WeatherAPI (https://www.weatherapi.com/) via REST dan Retrofit.
+🏠 Home Screen — Current Weather
+<p align="center"> <img src="/screenshots/home_light.jpg" width="280"> <img src="/screenshots/home_dark.jpg" width="280"> </p>
+🔍 Search Lokasi
+<p align="center"> <img src="/screenshots/search_light.jpg" width="280"> <img src="/screenshots/search_dark.jpg" width="280"> </p>
+🌤️ Detail Cuaca — Informasi Lengkap
+<p align="center"> <img src="/screenshots/detail_light.jpg" width="280"> <img src="/screenshots/detail_dark.jpg" width="280"> </p>
+📅 Prakiraan 3 Hari (Forecast)
+<p align="center"> <img src="/screenshots/forecast_light.jpg" width="280"> <img src="/screenshots/forecast_dark.jpg" width="280"> </p>
+🎨 Mode Terang & Mode Gelap Otomatis
+<p align="center"> <img src="/screenshots/all_light.jpg" width="280"> <img src="/screenshots/all_dark.jpg" width="280"> </p>
+✨ Fitur Utama
+🎯 1. Current Weather
 
+Suhu (C/F/K/R)
+
+Kondisi cuaca
+
+Ikon animasi
+
+Lokasi & negara
+
+UI yang berubah berdasarkan kondisi (rain, clear, cloudy)
+
+🔮 2. Forecast 3 Hari
+
+Suhu max/min
+
+Status cuaca
+
+Ikon kondisi
+
+📍 3. Deteksi Lokasi Otomatis
+
+Fused Location API
+
+Fallback otomatis ke Surakarta bila izin ditolak
+
+🔍 4. Pencarian Lokasi (Autocomplete)
+
+Real-time suggestions
+
+Menggunakan WeatherAPI search endpoint
+
+🌙 5. Dynamic Theme
+
+Light & dark mode
+
+Color scheme menyesuaikan cuaca
+
+Efek bokeh / ambience background
+
+🧩 Arsitektur & Struktur Project
+app/
+ ├── api/
+ │    ├── WeatherApi.kt
+ │    ├── RetrofitInstance.kt
+ │    └── Constant.kt
+ ├── ui/theme/
+ │    ├── WeatherColors.kt
+ │    └── Color.kt
+ ├── WeatherViewModel.kt
+ └── WeatherPage.kt
+
+🔗 API
+
+Menggunakan WeatherAPI.com
 Base URL:
-```
+
 https://api.weatherapi.com/v1/
-```
-
-Endpoints yang digunakan (implementasi di `WeatherApi.kt`):
-- `GET current.json` — fetch weather by query (`q`) atau koordinat (lat,lon)
-- `GET forecast.json` — fetch current + forecast (dipanggil dengan `days=3`)
-- `GET search.json` — autocomplete/pencarian lokasi
-
-API key saat ini tersimpan di `app/src/main/java/com/example/weather_app/api/Constant.kt`.
-
-Catatan keamanan: sebaiknya pindahkan API key ke mekanisme yang lebih aman (keystore, gradle properties, server proxy) sebelum merilis publik.
-
-## Struktur penting kode
-- `app/src/main/java/com/example/weather_app/WeatherPage.kt` — UI utama (Compose) dan berbagai komponen halaman.
-- `app/src/main/java/com/example/weather_app/WeatherViewModel.kt` — ViewModel untuk load data dari API & lokasi.
-- `app/src/main/java/com/example/weather_app/api/` — berisi `Retrofitlnstance.kt`, `WeatherApi.kt`, `Constant.kt`, dan model API.
-- `app/src/main/java/com/example/weather_app/ui/theme/WeatherColors.kt` — pemilihan ColorScheme berdasarkan kondisi cuaca dan mode gelap/terang.
-
-## Cara build dan jalankan (pengembangan)
-1. Pastikan Android Studio terpasang (stable) dengan plugin Kotlin dan emulator atau perangkat fisik.
-2. Buka project di Android Studio.
-3. Sync Gradle.
-4. Jalankan app di emulator / perangkat.
-
-Command line (opsional):
-```powershell
-# dari root project
-.\gradlew assembleDebug
-.\gradlew installDebug
-```
-
-## Cara testing fitur warna & kondisi cuaca
-- Untuk menguji skema warna, jalankan aplikasi dan cari atau set lokasi yang memiliki kondisi cuaca berbeda (rain, cloud, clear). UI akan mengubah ColorScheme sesuai kondisi.
-- Untuk menguji dark mode: aktifkan dark mode di emulator atau pengaturan sistem.
-- Untuk menguji landscape: putar emulator / perangkat.
-
-## Catatan dan rekomendasi
-- Pindahkan API key dari `Constant.kt` ke `local.properties` / `gradle.properties` atau server backend untuk menghindari ekspos kunci di repo publik.
-- Tambahkan unit tests/instrumentation tests untuk model parsing & ViewModel.
-- Tambahkan lebih banyak resolusi ikon (mdpi/hdpi/xhdpi) bila ingin dukungan perangkat lengkap.
 
 
+Endpoints:
 
+current.json
+
+forecast.json?days=3
+
+search.json
+
+⚠️ Tips keamanan:
+Pindahkan API Key dari kode ke local.properties atau backend server.
+
+▶️ Cara Build & Jalankan
+Android Studio
+
+Clone repo
+
+Buka project
+
+Sync Gradle
+
+Klik ▶ Run
+
+CLI
+./gradlew assembleDebug
+./gradlew installDebug
+
+🧪 Testing & Simulasi Cuaca
+Tes	Cara
+🌞 Cerah	Cari kota beriklim panas
+🌧️ Hujan	Cari kota hujan seperti Bogor
+☁️ Berawan	Cari kota seperti London
+🌙 Mode Gelap	Aktifkan dark mode sistem
+📱 Landscape	Putar perangkat
+🚀 Rencana Pengembangan
+
+⏱ Hourly forecast
+
+🗺 Map-based weather
+
+☁ Animasi awan / hujan realtime
+
+🧊 Offline cache (Room)
+
+🧩 Widget Android
+
+❤️ Kontributor
+
+👤 Narendra — Developer & UI/UX
